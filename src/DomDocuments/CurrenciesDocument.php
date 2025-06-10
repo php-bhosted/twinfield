@@ -97,7 +97,7 @@ class CurrenciesDocument extends \DOMDocument
                 $ratesElement->appendChild($rateElement);
 
                 if( ! empty($line->getStatus() ) ) {
-                    $statusElement = $this->createTextElement($line->getStatus());
+                    $statusElement = $this->createElement($line->getStatus());
                     $element = $this->createElement('status');
                     $element->appendChild($statusElement);
                     $rateElement->appendChild($element);
